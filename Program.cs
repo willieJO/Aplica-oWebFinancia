@@ -9,6 +9,7 @@ using APIFinancia.Application.Commands;
 using APIFinancia.Application.Handlers;
 using APIFinancia.Application.Validators;
 using APIFinancia.Infra.Repository;
+using APIFinancia.Infra.Extension;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
@@ -25,7 +26,7 @@ builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
 // Configuração dos pipelines
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
-builder.Services.AddValidatorsFromAssemblyContaining<UsuarioCommandValidator>();
+builder.Services.AddValidator();
 // Configuração do MVC
 builder.Services.AddControllers();
 

@@ -3,7 +3,7 @@ using MediatR;
 
 namespace APIFinancia.Application.Queries
 {
-    public class UsuarioByIdQuery : IRequest<Usuario>
+    public class UsuarioByIdQuery : IRequest<User>
     {
         public Guid Id { get; set; }
     }

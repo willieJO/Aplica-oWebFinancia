@@ -4,10 +4,10 @@ namespace APIFinancia.Infra.Repository
 {
     public interface IUsuarioRepository
     {
-        Task AddAsync(Usuario usuario);
-        Task UpdateAsync(Usuario usuairo);
-        Task DeleteAsync(Usuario usuario);
-        Task<Usuario> GetByIdAsync(Guid id);
-        Task<List<Usuario>> GetAll();
+        Task AddAsync(User usuario);
+        Task UpdateAsync(User usuairo);
+        Task DeleteAsync(User usuario);
+        Task<User> GetByIdAsync(Guid id);
+        Task<List<User>> GetAll();
     }
 }

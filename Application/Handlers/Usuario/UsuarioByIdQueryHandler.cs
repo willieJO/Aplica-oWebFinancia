@@ -1,10 +1,11 @@
-﻿using APIFinancia.Domain;
+﻿using APIFinancia.Application.Queries;
+using APIFinancia.Domain;
 using APIFinancia.Infra.Repository;
 using MediatR;
 
-namespace APIFinancia.Application.Queries
+namespace APIFinancia.Application.Handlers.Usuario
 {
-    public class UsuarioByIdQueryHandler : IRequestHandler<UsuarioByIdQuery, Usuario>
+    public class UsuarioByIdQueryHandler : IRequestHandler<UsuarioByIdQuery, User>
     {
         private readonly IUsuarioRepository _usuarioRepository;
 
@@ -13,7 +14,7 @@ namespace APIFinancia.Application.Queries
             _usuarioRepository = usuarioRepository;
         }
 
-        public async Task<Usuario> Handle(UsuarioByIdQuery request, CancellationToken cancellationToken)
+        public async Task<User> Handle(UsuarioByIdQuery request, CancellationToken cancellationToken)
         {
             return await _usuarioRepository.GetByIdAsync(request.Id);
         }

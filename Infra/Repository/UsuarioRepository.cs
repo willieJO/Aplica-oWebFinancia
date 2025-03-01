@@ -12,29 +12,29 @@ namespace APIFinancia.Infra.Repository
             _context = context;
         }
 
-        public async Task AddAsync(Usuario usuario)
+        public async Task AddAsync(User usuario)
         {
             await _context.Usuarios.AddAsync(usuario);
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Usuario usuario)
+        public async Task DeleteAsync(User usuario)
         {
             _context.Usuarios.Remove(usuario);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<List<Usuario>> GetAll()
+        public async Task<List<User>> GetAll()
         {
             return  await _context.Usuarios.ToListAsync();
         }
 
-        public Task<Usuario> GetByIdAsync(Guid id)
+        public Task<User> GetByIdAsync(Guid id)
         {
             return _context.Usuarios.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task UpdateAsync(Usuario usuairo)
+        public async Task UpdateAsync(User usuairo)
         {
             var existeUsuario = await _context.Usuarios.FindAsync(usuairo.Id);
             if (existeUsuario == null)

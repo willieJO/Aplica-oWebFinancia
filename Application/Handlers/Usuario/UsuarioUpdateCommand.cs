@@ -3,7 +3,7 @@ using APIFinancia.Domain;
 using APIFinancia.Infra.Repository;
 using MediatR;
 
-namespace APIFinancia.Application.Handlers
+namespace APIFinancia.Application.Handlers.Usuario
 {
     public class UsuarioUpdateCommand : IRequestHandler<UpdateUsuarioCommand, Guid>
     {
@@ -16,7 +16,7 @@ namespace APIFinancia.Application.Handlers
 
         public async Task<Guid> Handle(UpdateUsuarioCommand request, CancellationToken cancellationToken)
         {
-            var usuario = new Usuario
+            var usuario = new User
             {
                 Id = request.Id,
                 Name = request.Nome,

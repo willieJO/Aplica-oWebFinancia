@@ -19,7 +19,7 @@ namespace APIFinancia.Application.Handlers
 
         public async Task<Guid> Handle(UsuarioCommand request, CancellationToken cancellationToken)
         {
-            var usuario = new Usuario
+            var usuario = new User
             {
                 Name = request.Nome,
                 Email = request.Email,
