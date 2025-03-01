@@ -1,0 +1,65 @@
+# Compiled files
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.ilk
+*.lib
+*.ncb
+*.sdf
+*.suo
+*.unsuccessfulbuild
+*.vspscc
+*.vssscc
+*.vspx
+*.user
+*.aps
+*.pch
+*.opendb
+
+# Visual Studio
+.vscode/
+.vs/
+
+# NuGet
+*.nupkg
+packages/
+
+# Entity Framework
+Migrations/
+
+# Logs
+*.log
+logs/
+
+# User-specific files
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+*.sln.iml
+
+# JetBrains Rider
+*.sln.DotSettings.user
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*.swp
+
+# Secrets
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
