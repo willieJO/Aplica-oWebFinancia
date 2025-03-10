@@ -1,11 +1,11 @@
-﻿using APIFinancia.Application.Commands;
+﻿using APIFinancia.Application.Commands.Expense;
 using FluentValidation;
 
 namespace APIFinancia.Application.Validators
 {
-    public class GastoCommandValidator : AbstractValidator<CreateGastoCommand>
+    public class ExpenseCommandValidator : AbstractValidator<CreateExpenseCommand>
     {
-        public GastoCommandValidator()
+        public ExpenseCommandValidator()
         {
             RuleFor(x => x.Valor)
                 .GreaterThan(0).WithMessage("O valor do gasto deve ser maior que zero.")

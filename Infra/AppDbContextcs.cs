@@ -9,6 +9,7 @@ namespace APIFinancia.Infra
         {
         }
         public DbSet<User> Usuarios { get; set; }
+        public DbSet<Expense> Expense { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

@@ -8,12 +8,17 @@ using APIFinancia.Application.Behaviors;
 using APIFinancia.Application.Commands;
 using APIFinancia.Application.Handlers;
 using APIFinancia.Application.Validators;
-using APIFinancia.Infra.Repository;
 using APIFinancia.Infra.Extension;
+using APIFinancia.Shared;
+using System;
+using APIFinancia.Repository;
+using APIFinancia.Repository.Expense;
 
 var builder = WebApplication.CreateBuilder(args);
+ConformitySettings.ConnectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-
+builder.Services.AddScoped<IExpenseRepository, ExpenseRepository>();
+builder.Services.AddScoped<ADOContext>();
 // Configuração do banco de dados
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

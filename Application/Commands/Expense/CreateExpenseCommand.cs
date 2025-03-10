@@ -1,16 +1,14 @@
 ﻿using APIFinancia.Domain;
 using MediatR;
 
-namespace APIFinancia.Application.Commands
+namespace APIFinancia.Application.Commands.Expense
 {
-    public class CreateGastoCommand : IRequest<int>
+    public class CreateExpenseCommand : IRequest<int>
     {
-        public int Id { get; set; }
         public Guid UsuarioId { get; set; }
         public decimal Valor { get; set; }
         public string TipoGasto { get; set; }
-        public User Usuario { get; set; }
 
     }
-    
+
 }

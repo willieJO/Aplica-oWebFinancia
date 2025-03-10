@@ -1,7 +1,7 @@
 ﻿using APIFinancia.Application.Commands;
 using APIFinancia.Application.Notification;
 using APIFinancia.Domain;
-using APIFinancia.Infra.Repository;
+using APIFinancia.Repository;
 using MediatR;
 
 namespace APIFinancia.Application.Handlers
@@ -25,9 +25,8 @@ namespace APIFinancia.Application.Handlers
                 Email = request.Email,
                 Senha = request.Senha
             };
-
             await _usuarioRepository.AddAsync(usuario);
-            await _mediator.Publish(new UsuarioCriadaNotification { Id = usuario.Id, Nome = usuario.Name });
+            await _mediator.Publish(new UserCriadaNotification { Id = usuario.Id, Nome = usuario.Name });
             return usuario.Id;
         }
     }

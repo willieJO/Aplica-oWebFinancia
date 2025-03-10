@@ -1,6 +1,6 @@
 ﻿using APIFinancia.Application.Commands;
 using APIFinancia.Domain;
-using APIFinancia.Infra.Repository;
+using APIFinancia.Repository;
 using MediatR;
 
 namespace APIFinancia.Application.Handlers.Usuario

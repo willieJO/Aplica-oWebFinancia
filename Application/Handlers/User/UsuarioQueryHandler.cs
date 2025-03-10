@@ -1,7 +1,7 @@
 ﻿using APIFinancia.Application.Queries;
-using APIFinancia.Infra.Repository;
 using MediatR;
 using APIFinancia.Domain;
+using APIFinancia.Repository;
 namespace APIFinancia.Application.Handlers.Usuario
 {
     public class UsuarioQueryHandler : IRequestHandler<UsuarioQuery, List<User>>

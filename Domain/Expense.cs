@@ -1,6 +1,6 @@
 ﻿namespace APIFinancia.Domain
 {
-    public class Gasto
+    public class Expense
     {
         public int Id { get; set; } 
         public Guid UsuarioId { get; set; } 

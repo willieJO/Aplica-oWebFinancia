@@ -3,9 +3,9 @@ using MediatR;
 
 namespace APIFinancia.Application.LogEvent
 {
-    public class LogEventUsuarioHandler : INotificationHandler<UsuarioCriadaNotification>
+    public class LogEventUsuarioHandler : INotificationHandler<UserCriadaNotification>
     {
-        public Task Handle(UsuarioCriadaNotification notification, CancellationToken cancellationToken)
+        public Task Handle(UserCriadaNotification notification, CancellationToken cancellationToken)
         {
             return Task.Run(() =>
             {

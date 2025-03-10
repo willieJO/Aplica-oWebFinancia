@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace APIFinancia.Infra.Persistence
 {
-    public class GastoConfiguration : IEntityTypeConfiguration<Gasto>
+    public class GastoConfiguration : IEntityTypeConfiguration<Expense>
     {
-        public void Configure(EntityTypeBuilder<Gasto> builder)
+        public void Configure(EntityTypeBuilder<Expense> builder)
         {
             builder.ToTable("Gastos");
 

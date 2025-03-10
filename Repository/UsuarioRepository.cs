@@ -1,7 +1,8 @@
 ﻿using APIFinancia.Domain;
+using APIFinancia.Infra;
 using Microsoft.EntityFrameworkCore;
 
-namespace APIFinancia.Infra.Repository
+namespace APIFinancia.Repository
 {
     public class UsuarioRepository : IUsuarioRepository
     {

@@ -1,6 +1,6 @@
 ﻿using APIFinancia.Domain;
 
-namespace APIFinancia.Infra.Repository
+namespace APIFinancia.Repository
 {
     public interface IUsuarioRepository
     {

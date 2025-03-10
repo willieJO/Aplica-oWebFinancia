@@ -8,7 +8,7 @@ namespace APIFinancia.Infra.Extension
         public static IServiceCollection AddValidator(this IServiceCollection services)
         {
             services.AddValidatorsFromAssemblyContaining<UsuarioCommandValidator>();
-            services.AddValidatorsFromAssemblyContaining<GastoCommandValidator>();
+            services.AddValidatorsFromAssemblyContaining<ExpenseCommandValidator>();
             return services;
         }
     }
